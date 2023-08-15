@@ -16,7 +16,7 @@ The U.S. National Aeronautics & Space Administration
 (NASA) maintains a dataset of all known (>45K) meteorite strikes and sponsors research
 on these events.
 
-![21st Century Meteorite Strikes](./assets/21st_century_meteorite_strikes.png)
+![21st Century Meteorite Strikes](./resources/21st_century_meteorite_strikes.png)
 
 Your Chingu Voyage team will be using this data to create an app that will help
 anyone interested in these events explore this data in novel ways. Your app will
