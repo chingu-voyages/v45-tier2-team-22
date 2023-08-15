@@ -170,7 +170,7 @@ practical experience employers need and want.
 
 4. Commit to your branch using keywords: "feat, fix, style, refactor, docs" before your comment `git commit -m "keywords: <comment>"`. For example: `git commit -m "feat: Create footer section"`
 
-5. `git remote add origin https://github.com/chingu-voyages/v44-tier2-team-18.git`(only for the first time of this project)
+5. `git remote add origin https://github.com/chingu-voyages/v45-tier2-team-22.git`(only for the first time of this project)
 
 6. `git push origin <your branch name>`
 
