@@ -152,7 +152,7 @@ practical experience employers need and want.
    `npm install`
 
 3. run the project in your local host  
-   `npm start`
+   `npm run dev`
 
 <br>
 <br>
