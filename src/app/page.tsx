@@ -1,7 +1,7 @@
 // import Image from "next/image";
 // import styles from "./page.module.css";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
 import DetailData from "@/components/detailData/DetailData";
 import Search from "@/components/search/Search";
 import SummaryMetrics from "@/components/summaryMetrics/SummaryMetrics";
