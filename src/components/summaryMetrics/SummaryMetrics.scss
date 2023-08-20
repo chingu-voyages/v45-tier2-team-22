@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    border: 2px blue solid;
+}
+
+.metric {
+    padding: 2rem;
+    flex: 1;
+    text-align: center;
+}
+
+.metric-title {
+    font-size: x-small;
+    font-weight: bold;
+}
