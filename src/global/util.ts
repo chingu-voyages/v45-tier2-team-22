@@ -7,3 +7,14 @@ export const getFetchData = async (url: string, options?: {}) => {
     console.error(e);
   }
 };
+
+// Converts strings to numbers if possible.
+export const convertToNumber = (input: string): number | void => {
+  const parsedNumber = parseFloat(input);
+
+  if (isNaN(parsedNumber)) {
+    return console.log(`${input} can't be converted to a number.`);
+  }
+
+  return parsedNumber;
+};
