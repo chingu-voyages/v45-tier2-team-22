@@ -1,84 +1,91 @@
-//@ts-nocheck
 'use client' // NEXTJS client side component
 import React from "react";
 import "./SummaryMetrics.scss";
 import strikes from '../../../resources/meteors.json';
 
+interface StrikeData {
+  name: string;
+  id: string;
+  nametype: string;
+  recclass: string;
+  mass: string;
+  fall: string;
+  year: string;
+  reclat: string;
+  reclong: string;
+  geolocation: {
+      latitude: string;
+      longitude: string;
+  };
+}
+
 const SummaryMetrics = () => {
 
   // calculate amount of strikes from dataset (length of JSON)
-  const calculateAmountOfStrikes = (dataset) => {
-    let totalStrikes = Object.keys(dataset).length;
-    return totalStrikes
-  }
+  const calculateAmountOfStrikes = (dataset: StrikeData[]): number => {
+    let totalStrikes: number = Object.keys(dataset).length;
+    return totalStrikes;
+}
 
   // calculate avg mass of strikes 
 
-  const averageMass = (dataset) => {
-  
+  const averageMass = (dataset: StrikeData[]): number => {
     const totalMass = dataset.reduce((sum, object) => {
-      const mass = parseFloat(object.mass);
-      // console.log(`Adding mass: ${mass}`);
-      // console.log(`Sum: ${sum}`);
-      return isNaN(mass) ? sum : sum + mass;
+        const mass = parseFloat(object.mass);
+        return isNaN(mass) ? sum : sum + mass;
     }, 0);
-    
-    let averageMass = totalMass / calculateAmountOfStrikes(dataset)
 
-    return parseInt(averageMass);
-  }
+    const averageMass: number = totalMass / dataset.length;
+
+    return (averageMass);
+}
 
 // extracts year from dataset row
-  function extractYearFromMeteoriteData(data) {
-    const yearString = data.year;
-    const year = new Date(yearString).getFullYear();
-    return year;
-  }
+const extractYearFromMeteoriteData = (dataset: StrikeData): number => {
+  const yearString = dataset.year;
+  const year = new Date(yearString).getFullYear();
+  return year;
+}
   
-  const extractedYear = extractYearFromMeteoriteData(strikes[5]);
-  console.log(`Extracted Year: ${extractedYear}`);
-
-
+  
   // function returns the amount of times in each year 
-  function countYearsInDataset(dataset) {
-    const yearCounts = {};
+  const countYearsInDataset = (dataset: StrikeData[]): Record<number, number> => {
+    const yearCounts: Record<number, number> = {};
     
     dataset.forEach((data) => {
-      const year = extractYearFromMeteoriteData(data);
-      if (yearCounts[year]) {
-        yearCounts[year]++;
-      } else {
-        yearCounts[year] = 1;
-      }
+        const year = extractYearFromMeteoriteData(data);
+        if (yearCounts[year]) {
+            yearCounts[year]++;
+        } else {
+            yearCounts[year] = 1;
+        }
     });
     
-    console.log(yearCounts)
+    console.log(yearCounts);
     return yearCounts;
-  }
+}
   
 
   
 
-  function extractRecclassFromMeteoriteData(data) {
-    return data.recclass;
-  }
+const extractRecclassFromMeteoriteData = (data: StrikeData): string => {
+  return data.recclass;}
 
   // function calculates composition count from dataset
-  function countRecclassesInDataset(dataset) {
-    const recclassCounts = {};
+  const countRecclassesInDataset = (dataset: StrikeData[]): Record<string, number> => {
+    const recclassCounts: Record<string, number> = {};
     
     dataset.forEach((data) => {
-      const recclass = extractRecclassFromMeteoriteData(data);
-      if (recclassCounts[recclass]) {
-        recclassCounts[recclass]++;
-      } else {
-        recclassCounts[recclass] = 1;
-      }
+        const recclass = extractRecclassFromMeteoriteData(data);
+        if (recclassCounts[recclass]) {
+            recclassCounts[recclass]++;
+        } else {
+            recclassCounts[recclass] = 1;
+        }
     });
     
-    
     return recclassCounts;
-  }
+}
   
   const amountOfStrikes = calculateAmountOfStrikes(strikes)
   const recclassCounts = countRecclassesInDataset(strikes);
@@ -86,6 +93,15 @@ const SummaryMetrics = () => {
   const yearCounts = countYearsInDataset(strikes);
   const yearsCountLength = Object.keys(yearCounts).length
 
+  // create histogram of strikes per year
+
+  // create histogram of strikes by composition
+
+
+  // CONSOLE LOG STATEMENTS FOR TESTING PURPOSES
+
+  // const extractedYear = extractYearFromMeteoriteData(strikes[5]);
+  // console.log(`Extracted Year: ${extractedYear}`);
   
   // console.log("Recclass Counts:");
   // for (const recclass in recclassCounts) {
@@ -97,9 +113,7 @@ const SummaryMetrics = () => {
   //   console.log(`${year}: ${yearCounts[year]}`);
   // }
 
-  // create histogram of strikes per year
 
-  // create histogram of strikes by composition
   
   return (
 
