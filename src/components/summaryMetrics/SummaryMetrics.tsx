@@ -3,6 +3,9 @@ import React from "react";
 import "./SummaryMetrics.scss";
 import strikes from '../../../resources/meteors.json';
 
+// Import the context hook
+import {useAppContext} from '../../context/AppContext';
+
 interface StrikeData {
   name: string;
   id: string;
@@ -20,6 +23,11 @@ interface StrikeData {
 }
 
 const SummaryMetrics = () => {
+
+  // Access to initial state and reducer
+  const {state, dispatch} = useAppContext();
+
+  console.log(state)
 
   // calculate amount of strikes from dataset (length of JSON)
   const calculateAmountOfStrikes = (dataset: StrikeData[]): number => {
@@ -66,8 +74,6 @@ const extractYearFromMeteoriteData = (dataset: StrikeData): number => {
 }
   
 
-  
-
 const extractRecclassFromMeteoriteData = (data: StrikeData): string => {
   return data.recclass;}
 
@@ -86,11 +92,13 @@ const extractRecclassFromMeteoriteData = (data: StrikeData): string => {
     
     return recclassCounts;
 }
-  
-  const amountOfStrikes = calculateAmountOfStrikes(strikes)
-  const recclassCounts = countRecclassesInDataset(strikes);
+
+// CONSTANTS for later rendering
+
+  const amountOfStrikes = calculateAmountOfStrikes(state)
+  const recclassCounts = countRecclassesInDataset(state);
   const compositionLength = Object.keys(recclassCounts).length
-  const yearCounts = countYearsInDataset(strikes);
+  const yearCounts = countYearsInDataset(state);
   const yearsCountLength = Object.keys(yearCounts).length
 
   // create histogram of strikes per year
