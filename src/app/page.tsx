@@ -8,6 +8,10 @@ import SummaryMetrics from '@/components/summaryMetrics/SummaryMetrics';
 export default function Home() {
   return (
     <main>
+      <Header />
+      <Search />
+      <DetailData />
+      <SummaryMetrics />
       <Footer />
     </main>
   );
