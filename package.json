@@ -23,5 +23,8 @@
     "react-icons": "^4.10.1",
     "sass": "^1.65.1",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "cypress": "^12.17.4"
   }
 }
