@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import "./Search.scss";
 import { getFetchData } from "@/global/util";
 import { BiSearch } from "react-icons/bi";
+import { MdClear } from "react-icons/md";
 import { useAppContext } from "@/context/AppContext";
 import { StateType } from "@/reducer/reducer";
 
@@ -137,8 +138,6 @@ const Search = () => {
             <div className="select_wrapper" key={search.id}>
               <BiSearch />
               <select
-                name="pets"
-                id="pet-select"
                 className="search_select"
                 value={search.value}
                 placeholder={search.placeholder}
@@ -160,7 +159,10 @@ const Search = () => {
           )
         )}
         <button className="clear_button" onClick={() => clearAllSearch()}>
-          clear All
+          <div>
+            <MdClear size="1rem" />
+            Clear All
+          </div>
         </button>
         <button className="search_button" onClick={() => searchHandler()}>
           Search

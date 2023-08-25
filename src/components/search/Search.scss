@@ -10,7 +10,7 @@
       svg {
         position: absolute;
         height: 100%;
-        margin-left: 8px;
+        margin-left: 6px;
       }
     }
     .option_default_text {
@@ -22,17 +22,17 @@
       border: solid 1px gray;
       background-color: transparent;
       height: 30px;
-      width: 180px;
-      padding-left: 30px;
+      width: 170px;
+      padding-left: 26px;
       padding-right: 10px;
     }
-    // .search_input {
-    //   padding-left: 30px;
-    //   padding-right: 10px;
-    // }
     .search_button {
       background-color: $complementary;
       border: none;
+      transition: all 0.2s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
     .search_button,
     .clear_button {
@@ -43,9 +43,24 @@
     }
     .clear_button {
       background: transparent;
+      &:after {
+        display: block;
+        content: "";
+        border-bottom: solid 1px white;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out;
+        transform-origin: 0% 50%;
+      }
+      &:hover:after {
+        transform: scaleX(1);
+      }
+      div {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 4px;
+        }
+      }
     }
-    // .search_input::placeholder {
-    //   padding-left: 50px;
-    // }
   }
 }
