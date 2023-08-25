@@ -1,0 +1,51 @@
+@import "../../scss/constants";
+.search_comp {
+  .search_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .input_wrapper,
+    .select_wrapper {
+      position: relative;
+      svg {
+        position: absolute;
+        height: 100%;
+        margin-left: 8px;
+      }
+    }
+    .option_default_text {
+      color: gray;
+    }
+    .search_input,
+    .search_select {
+      outline: none;
+      border: solid 1px gray;
+      background-color: transparent;
+      height: 30px;
+      width: 180px;
+      padding-left: 30px;
+      padding-right: 10px;
+    }
+    // .search_input {
+    //   padding-left: 30px;
+    //   padding-right: 10px;
+    // }
+    .search_button {
+      background-color: $complementary;
+      border: none;
+    }
+    .search_button,
+    .clear_button {
+      border: none;
+      margin: 0 6px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .clear_button {
+      background: transparent;
+    }
+    // .search_input::placeholder {
+    //   padding-left: 50px;
+    // }
+  }
+}
