@@ -1,9 +1,9 @@
 'use client'
 
 import React from "react";
+import { useAppContext } from '../../context/AppContext';
 import DataTable from 'react-data-table-component';
 import "./DetailData.scss";
-import Meteors from "/public/meteors.json"
 
 interface Meteor {
     name: string;
@@ -18,11 +18,8 @@ interface Meteor {
     geolocation: { 
       latitude: string; 
       longitude: string };
-};
+};  // Possibly a better way to do this??
 
-let meteorData = Meteors;
-const meteorTen = meteorData.slice(0,99)
-console.log(meteorTen)
 
 const columns = [
   {
@@ -45,32 +42,31 @@ const columns = [
       name: 'Year',
       selector: (row : Meteor) => row.year ? row.year.slice(0, 4) : 'No year',
   },
-  {
+  /*{
       name: 'Latitude',
       selector: (row : Meteor) => row.reclat,
   },
   {
       name: 'Longitude',
       selector: (row : Meteor) => row.reclong,
-  }  
+  } */
 ];
 
 
-const Table = () => {
-  return (
-      <DataTable
-          columns={columns}
-          data={meteorTen}
-          pagination
-      />
-  );
-};
-
 const DetailData = () => {
+
+const {state, dispatch} = useAppContext();
+
+const mockSearchResult = state.slice(400,449)
+
   return (
     <>
       <div>DetailData</div>
-      <Table/>
+      <DataTable
+          columns={columns}
+          data={mockSearchResult}
+          pagination
+      />
     </>
   )
 };
