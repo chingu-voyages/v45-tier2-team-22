@@ -203,7 +203,17 @@ practical experience employers need and want.
 
 <br>
 <br>
-<br>
+
+# Cypress testing
+
+The project comes with component testing with Cypress
+
+- Run 'npx cypress open' from the project command line to start cypress.
+- Click on Component Testing, then specs, to see a list of component tests.
+- Currently, each component has a test that checks if the componenet has mounted properly.
+- Click on the test and it will be run with outcome displayed.
+- There is also a .cy.tsx file in each componenet folder.
+- In time these will be developed to give further test coverage
 
 # voyage-tasks
 
