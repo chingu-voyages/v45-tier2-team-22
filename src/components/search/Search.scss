@@ -1,0 +1,66 @@
+@import "../../scss/constants";
+.search_comp {
+  .search_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .input_wrapper,
+    .select_wrapper {
+      position: relative;
+      svg {
+        position: absolute;
+        height: 100%;
+        margin-left: 6px;
+      }
+    }
+    .option_default_text {
+      color: gray;
+    }
+    .search_input,
+    .search_select {
+      outline: none;
+      border: solid 1px gray;
+      background-color: transparent;
+      height: 30px;
+      width: 170px;
+      padding-left: 26px;
+      padding-right: 10px;
+    }
+    .search_button {
+      background-color: $complementary;
+      border: none;
+      transition: all 0.2s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    .search_button,
+    .clear_button {
+      border: none;
+      margin: 0 6px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .clear_button {
+      background: transparent;
+      &:after {
+        display: block;
+        content: "";
+        border-bottom: solid 1px white;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out;
+        transform-origin: 0% 50%;
+      }
+      &:hover:after {
+        transform: scaleX(1);
+      }
+      div {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}

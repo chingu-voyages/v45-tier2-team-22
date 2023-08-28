@@ -1,4 +1,4 @@
-interface ComputedRegion {
+export interface ComputedRegion {
   ":@computed_region_cbhk_fwbd"?: string | undefined;
   ":@computed_region_nnqa_25f4"?: string | undefined;
 }
