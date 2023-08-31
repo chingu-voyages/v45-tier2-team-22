@@ -1,6 +1,6 @@
 export const getFetchData = async (url: string, options?: {}) => {
   try {
-    const response = await fetch(url);
+    const response = options ? await fetch(url) : await fetch(url, options);
     return await response.json();
   } catch (e) {
     alert(e);
