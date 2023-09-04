@@ -18,13 +18,15 @@
     "next": "13.4.16",
     "radar-sdk-js": "^4.1.6",
     "react": "18.2.0",
+    "react-data-table-component": "^7.5.4",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "recharts": "^2.8.0",
     "sass": "^1.65.1",
+    "styled-components": "^6.0.7",
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "cypress": "^12.17.4"
+    "cypress": "^13.1.0"
   }
 }
