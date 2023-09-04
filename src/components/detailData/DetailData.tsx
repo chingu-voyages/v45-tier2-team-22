@@ -2,27 +2,26 @@
 
 import React, { useState } from "react";
 import { useAppContext } from '../../context/AppContext';
+import { StateType } from "@/reducer/reducer";
 import DataTable from 'react-data-table-component';
 import "./DetailData.scss";
 
-interface Meteor {
-    name: string;
-    id: string;
-    nametype: string;
-    recclass: string;
-    mass: string;
-    fall: string;
-    year: string;
-    reclat: string;
-    reclong: string;
-    geolocation: { 
-      latitude: string; 
-      longitude: string };
-};  // Possibly a better way to do this??
+// interface Meteor {
+//     name: string;
+//     id: string;
+//     nametype: string;
+//     recclass: string;
+//     mass: string;
+//     fall: string;
+//     year: string;
+//     reclat: string;
+//     reclong: string;
+//     geolocation: { 
+//       latitude: string; 
+//       longitude: string };
+// };
 
-
-
-
+const testLocation = "Area 51, NV"
 
 const DetailData = () => {
 
@@ -33,34 +32,25 @@ const mockSearchResult = state;
 const columns = [
   {
       name: 'Name',
-      selector: (row : Meteor) => row.name,
+      selector: (row : StateType) => row.name,
   },
-  /* {
-      name: 'id',
-      selector: (row : Meteor) => row.id,
-  }, */
   {
       name: 'Recclass',
-      selector: (row : Meteor) => row.recclass,
+      selector: (row : StateType) => row.recclass,
   },
   {
       name: 'Mass (g)',
-      selector: (row : Meteor) => row.mass,
+      selector: (row : StateType) => row.mass,
   },
   {
       name: 'Year',
-      selector: (row : Meteor) => row.year ? row.year.slice(0, 4) : 'No year',
-  },
-  /*{
-      name: 'Latitude',
-      selector: (row : Meteor) => row.reclat,
+      selector: (row : StateType) => row.year ? row.year.slice(0, 4) : 'No year',
   },
   {
-      name: 'Longitude',
-      selector: (row : Meteor) => row.reclong,
-  } */
+    name: 'Location',
+    selector: (row : StateType) => testLocation,
+},
 ];
-
 
 const paginationComponentOptions = {
   noRowsPerPage: true
@@ -68,7 +58,7 @@ const paginationComponentOptions = {
 const customStyles = {
   rows: {
       style: {
-          minHeight: '30px', 
+          minHeight: '30px',
       },
   },
   headCells: {
