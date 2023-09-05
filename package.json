@@ -9,19 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.80.8",
+    "@react-three/fiber": "^8.13.7",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.16",
-    "maplibre-gl": "^3.3.1",
+    "glslify-loader": "^2.0.0",
+    "gsap": "^3.12.2",
     "next": "13.4.16",
-    "radar-sdk-js": "^4.1.6",
+    "raw-loader": "^4.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "recharts": "^2.8.0",
     "sass": "^1.65.1",
+    "three": "^0.155.0",
     "typescript": "5.1.6"
   },
   "devDependencies": {
