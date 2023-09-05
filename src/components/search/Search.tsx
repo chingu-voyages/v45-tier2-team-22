@@ -7,6 +7,7 @@ import { BiSearch } from "react-icons/bi";
 import { MdClear } from "react-icons/md";
 import { useAppContext } from "@/context/AppContext";
 import { StateType } from "@/reducer/reducer";
+import Radar from "radar-sdk-js";
 
 const Search = () => {
   const [meteoriteName, setMeteoriteName] = useState<string>("");
@@ -113,6 +114,29 @@ const Search = () => {
     });
 
     setFilteredData(targetArray);
+  };
+
+  const [graphDataArray, setGraphDataArray] = useState([]);
+  const numberOfDataToShow: number = 10;
+  useEffect(() => {
+    // for(let i=0;i<numberOfDataToShow;i++){
+    getReverseGeolocation();
+    // }
+  }, [filteredData]);
+
+  const getReverseGeolocation = async () => {
+    if (process.env.NEXT_PUBLIC_FIREBALL_API_KEY) {
+      Radar.initialize(process.env.NEXT_PUBLIC_FIREBALL_API_KEY);
+      Radar.reverseGeocode({ latitude: 40.783826, longitude: -73.975363 })
+        .then((result) => {
+          const { addresses } = result;
+          console.log(addresses);
+        })
+        .catch((err) => {
+          alert(err);
+          console.error(err);
+        });
+    }
   };
 
   return (
