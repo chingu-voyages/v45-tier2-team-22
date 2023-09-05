@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px blue solid;
+    // height: 100%;
+}
+
+.metric-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.graph-container {
+    overflow:auto;
+    height: 150px;
+}
+
+.metric {
+    padding: 2rem;
+    flex: 1;
+    text-align: center;
+    height: 20rem;
+    width: 50rem;
+}
+
+.metric-title {
+    font-size: x-small;
+    font-weight: bold;
+}

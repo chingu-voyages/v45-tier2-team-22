@@ -5,6 +5,7 @@ import DetailData from '@/components/detailData/DetailData';
 import Search from '@/components/search/Search';
 import SummaryMetrics from '@/components/summaryMetrics/SummaryMetrics';
 import Globe from '@/components/globe/Globe';
+import { MdHeight } from 'react-icons/md';
 export default function Home() {
   return (
     <main>

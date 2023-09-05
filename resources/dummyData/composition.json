@@ -1,0 +1,474 @@
+[
+    {
+      "reoclass": "L5",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H6",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "EH4",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "Acapulcoite",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "LL3-6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H5",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Diogenite-pm",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Unknown",
+      "category": "Unknown"
+    },
+    {
+      "reoclass": "H4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Iron, IVA",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "CR2-an",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "LL5",
+      "category": "stony"
+    },
+    {
+      "reoclass": "CI1",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L/LL4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Eucrite-mmict",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "CV3",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "Ureilite-an",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "Stone-uncl",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "L3",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "Angrite",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "LL6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Aubrite",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Iron, IIAB",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "Iron, IAB-sLL",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "Iron, ungrouped",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "CM2",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "OC",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Mesosiderite-A1",
+      "category": "stony"
+    },
+    {
+      "reoclass": "LL4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "C2-ung",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "LL3.8",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "Howardite",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "Eucrite-pmict",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Diogenite",
+      "category": "stony"
+    },
+    {
+      "reoclass": "LL3.15",
+      "category": "stony"
+    },
+    {
+      "reoclass": "LL3.9",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Iron, IAB-MG",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "H/L3.9",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "Iron?",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "Eucrite",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "H4-an",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L/LL6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Iron, IIIAB",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "H/L4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H4-5",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L3.7",
+      "category": "stony"
+    },
+    {
+      "reoclass": "LL3.4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Martian (chassignite)",
+      "category": "martian"
+    },
+    {
+      "reoclass": "EL6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H3.8",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H3-5",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H5-6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Mesosiderite",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "H5-7",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L3-6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H4-6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Ureilite",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "Iron, IID",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "Mesosiderite-A3/4",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "CO3.3",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H3",
+      "category": "stony"
+    },
+    {
+      "reoclass": "EH3/4-an",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Iron, IIE",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "L/LL5",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H3.7",
+      "category": "stony"
+    },
+    {
+      "reoclass": "CBa",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H4/5",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H3/4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H?",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H3-6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L3.4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Iron, IAB-sHL",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "L3.7-6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "EH7-an",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Iron",
+      "category": "stony"
+    },
+    {
+      "reoclass": "CR2",
+      "category": "stony"
+    },
+    {
+      "reoclass": "CO3.2",
+      "category": "stony"
+    },
+    {
+      "reoclass": "K3",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L5/6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "CK4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Iron, IIE-an",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "L3.6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "LL3.2",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Pallasite",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "CO3.5",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Lodranite",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "Mesosiderite-A3",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L3-4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H5/6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Pallasite, PMG",
+      "category": "iron / stone"
+    },
+    {
+      "reoclass": "Eucrite-cm",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L5-6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "CO3.6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Martian (nakhlite)",
+      "category": "martian"
+    },
+    {
+      "reoclass": "LL3.6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "C3-ung",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H3-4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "CO3.4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "EH3",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Iron, IAB-ung",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "Winonaite",
+      "category": "stony"
+    },
+    {
+      "reoclass": "LL",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Eucrite-br",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Iron, IIF",
+      "category": "iron / nickel"
+    },
+    {
+      "reoclass": "R3.8-6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "L4-6",
+      "category": "stony"
+    },
+    {
+      "reoclass": "EH5",
+      "category": "stony"
+    },
+    {
+      "reoclass": "LL3.00",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H3.4",
+      "category": "stony"
+    },
+    {
+      "reoclass": "Martian (shergottite)",
+      "category": "martian"
+    },
+    {
+      "reoclass": "Achondrite-ung",
+      "category": "stony"
+    },
+    {
+      "reoclass": "LL3.3",
+      "category": "stony"
+    },
+    {
+      "reoclass": "C",
+      "category": "stony"
+    },
+    {
+      "reoclass": "H/L3.6",
+      "category": "stony"
+    }
+  ]

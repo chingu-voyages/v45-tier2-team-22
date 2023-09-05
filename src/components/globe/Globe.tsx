@@ -1,12 +1,5 @@
 'use client';
-import React, {
-  Suspense,
-  useLayoutEffect,
-  useRef,
-  useState,
-  createRef,
-  useEffect,
-} from 'react';
+import React, { Suspense, useLayoutEffect, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useTexture } from '@react-three/drei';
 import { AdditiveBlending, BackSide } from 'three';
@@ -19,8 +12,9 @@ import { gsap } from 'gsap';
 import './Globe.scss';
 
 function Scene() {
-  const { state } = useAppContext();
-  const points = state.slice(0, 500);
+  const { filteredData } = useAppContext();
+  const points =
+    filteredData.length > 1500 ? filteredData.slice(0, 1500) : filteredData;
   const texture = useTexture('images/earth_uv_map.jpg');
   const pointRef: any = useRef();
 
@@ -33,7 +27,7 @@ function Scene() {
           yoyo: true,
           repeat: -1,
           ease: 'linear',
-          delay: Math.random(),
+          delay: Math.random() * 2,
         });
       });
     }, pointRef);
@@ -84,7 +78,7 @@ function Scene() {
               scale={[1, 1, 0.5]}
             >
               <boxGeometry args={[0.02, 0.02, 0.3]} />
-              <meshStandardMaterial color='#9f6af5' transparent opacity={0.6} />
+              <meshStandardMaterial color='#9f6af5' transparent opacity={0.8} />
             </mesh>
           );
         })}
