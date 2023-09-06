@@ -27,7 +27,7 @@ const DetailData = () => {
 
 const {state, filteredData} = useAppContext();
 
-const mockSearchResult = state;
+const mockSearchResult = filteredData;
 
 const columns = [
   {
