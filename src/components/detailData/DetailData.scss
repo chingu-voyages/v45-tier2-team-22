@@ -1,0 +1,67 @@
+// .tableData {
+//     width: 678.5px;
+//     height: 535px;
+//     padding: 10px;
+//     background-color: #000D21;
+// }
+
+.rdt_Table {
+    background-color: #000D21;
+    border: none;    
+}
+.rdt_TableRow {
+    background-color: #000D21;
+    border: none;
+
+}
+.rdt_TableCol {
+    background-color: #292C45;
+    border: #292C45 solid 1px;
+    
+}
+.rdt_TableCol_Sortable {
+    border: #292C45 solid 1px;
+    
+}
+.rdt_TableCell {
+    background-color: #000D21;
+    color: #DCE5F3;
+    
+
+}
+.rdt_TableHeader {
+    border: #292C45 solid 1px;
+}
+.rdt_TableFooter {
+    border: #292C45 solid 1px;
+}
+.rdt_TableHead {
+    background-color: #292C45;
+    color: #DCE5F3;
+    border: #292C45 solid 1px;
+}
+.rdt_TableHeadRow {
+    background-color: #292C45;
+    color: #DCE5F3;
+    border: #292C45 solid 1px;
+}
+.rdt_TableBody {
+    border: #292C45 solid 1px;
+}
+.rdt_ExpanderRow {
+    border: #292C45 solid 1px;
+}
+
+.rtd_Pagination, .isdzT {
+    background-color: #292C45;
+    color: #DCE5F3;
+    border: #292C45 solid 1px;
+}
+
+.container {
+    height: 535px;
+    width: 678.5px;
+    //margin-top: 226px;
+    //margin-left: 42px;
+    text-align: center;
+}
