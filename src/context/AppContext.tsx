@@ -14,14 +14,34 @@ import DUMMY_DATA from "../../public/meteors.json";
 
 import { StateType, ActionType } from "@/reducer/reducer";
 
-const initialState: StateType[] = DUMMY_DATA;
+import { StrikeData } from "@/interfacess/interfaces";
+
+// removed DUMMYData
+const initialState: StateType[] = [];
 const initialFilteredData: StateType[] = [];
+
+// API URL Target
+const MeteorStrikeAPI = 'https://data.nasa.gov/resource/gh4g-9sfh.json';
+
+function fetchData<T>(url: string): Promise<T> {
+  return fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Request failed with status: ${response.status}`);
+      }
+      return response.json() as Promise<T>;
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+      throw error;
+    });
+}
 
 const DataContext = createContext<{
   state: StateType[];
   filteredData: StateType[];
   dispatch: Dispatch<ActionType>;
-  setFilteredData: Dispatch<SetStateAction<StateType[]>>;
+  setFilteredData: Dispatch<SetStateAction<StrikeData[]>>;
 }>({
   state: initialState,
   dispatch: () => null,
@@ -31,11 +51,18 @@ const DataContext = createContext<{
 
 const AppContext = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [filteredData, setFilteredData] = useState<StateType[]>([]);
+  const [filteredData, setFilteredData] = useState<StrikeData[]>([]);
 
   useEffect(() => {
-    setFilteredData(state);
-  }, [state]);
+    fetchData(MeteorStrikeAPI)
+      .then(data => {
+        // not sure yet how to add the data type, StrikeData to the fetch data
+        setFilteredData(data);
+      })
+      .catch(error => {
+        console.error('Error', error)
+      })
+  }, []);
 
   return (
     <DataContext.Provider
