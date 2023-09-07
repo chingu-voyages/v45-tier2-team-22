@@ -118,12 +118,18 @@ const Search = () => {
   return (
     <div className="search_comp">
       <div className="search_wrapper">
-        {searchArray.map((search) =>
+        {searchArray.map((search, index) =>
           search.type === "text" ? (
             <div className="input_wrapper" key={search.id}>
               <BiSearch />
               <input
-                className="search_input"
+                className={
+                  index === 0
+                    ? "search_input radiusLeft"
+                    : index === searchArray.length - 1
+                    ? "search_input radiusRight"
+                    : "search_input"
+                }
                 type="text"
                 name={search.name}
                 id={search.id}
@@ -143,12 +149,14 @@ const Search = () => {
                 placeholder={search.placeholder}
                 onChange={(e: React.FormEvent<HTMLSelectElement>) =>
                   search.onChange(e)
-                }>
+                }
+              >
                 <option
                   className="option_default_text"
                   value=""
                   disabled
-                  hidden>
+                  hidden
+                >
                   Year of strike
                 </option>
                 {search.options?.map((opt) => (

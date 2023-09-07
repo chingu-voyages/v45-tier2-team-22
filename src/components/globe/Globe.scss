@@ -1,7 +1,10 @@
+@use "../../scss/functions" as *;
+
 .globeContainer {
-  height: 500px;
-  width: 500px;
+  height: px-to-rem(600px);
+  width: px-to-rem(600px);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-basis: 40%;
 }

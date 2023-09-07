@@ -1,31 +1,35 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 2px blue solid;
-    // height: 100%;
+@use "../../scss/constants" as *;
+
+.summaryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px blue solid;
+  height: 100%;
+  width: 100%;
+  margin: $spacing_m 0 $spacing_s 0;
 }
 
-.metric-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.metric-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .graph-container {
-    overflow:auto;
-    height: 150px;
+  overflow: auto;
+  height: 150px;
 }
 
 .metric {
-    padding: 2rem;
-    flex: 1;
-    text-align: center;
-    height: 20rem;
-    width: 50rem;
+  padding: 2rem;
+  flex: 1;
+  text-align: center;
+  height: 20rem;
+  width: 50rem;
 }
 
 .metric-title {
-    font-size: x-small;
-    font-weight: bold;
+  font-size: x-small;
+  font-weight: bold;
 }

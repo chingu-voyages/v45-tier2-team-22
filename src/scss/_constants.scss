@@ -1,3 +1,4 @@
+@use "../scss/functions" as *;
 // COLORS DARK THEME
 $primary_dark: #000d21;
 $secondary_dark: #292c45;
@@ -10,23 +11,23 @@ $secondary_light: #eeeeee;
 $accent_light: #a87700;
 
 // TYPOGRAPHY
-$heading_large: 23px;
-$heading_medium: 19px;
-$text_medium: 16px;
-$text_small: 14px;
+$heading_large: px-to-rem(23px);
+$heading_medium: px-to-rem(19px);
+$text_medium: px-to-rem(16px);
+$text_small: px-to-rem(14px);
 
 $fontweight_regular: 400;
 $fontweight_light: 300;
 
 // SPACING
-$spacing_2xs: 12px;
-$spacing_xs: 18px;
-$spacing_s: 24px;
-$spacing_m: 36px;
-$spacing_l: 48px;
-$spacing_xl: 72px;
-$spacing_xxl: 96px;
-$spacing_3xl: 144px;
+$spacing_2xs: px-to-rem(12px);
+$spacing_xs: px-to-rem(18px);
+$spacing_s: px-to-rem(24px);
+$spacing_m: px-to-rem(36px);
+$spacing_l: px-to-rem(48px);
+$spacing_xl: px-to-rem(72px);
+$spacing_xxl: px-to-rem(96px);
+$spacing_3xl: px-to-rem(144px);
 
 // BREAKPOINTS
 $xsBreakpoint: 576px;

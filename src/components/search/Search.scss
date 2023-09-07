@@ -1,4 +1,6 @@
-@import "../../scss/constants";
+@use "../../scss/constants" as *;
+@use "../../scss/functions" as *;
+
 .search_comp {
   .search_wrapper {
     display: flex;
@@ -19,12 +21,14 @@
     .search_input,
     .search_select {
       outline: none;
-      border: solid 1px gray;
+      border: solid 1px $secondary_dark;
       background-color: transparent;
-      height: 30px;
-      width: 170px;
-      padding-left: 26px;
-      padding-right: 10px;
+      width: px-to-rem(200px);
+      padding: px-to-rem(12px) px-to-rem(10px) px-to-rem(12px) px-to-rem(24px);
+
+      option {
+        color: $primary_dark;
+      }
     }
     .search_button {
       background-color: $complementary;
@@ -40,6 +44,7 @@
       margin: 0 6px;
       padding: 10px;
       cursor: pointer;
+      border-radius: 6px;
     }
     .clear_button {
       background: transparent;
@@ -63,4 +68,12 @@
       }
     }
   }
+}
+
+.radiusLeft {
+  border-radius: 6px 0 0 6px;
+}
+
+.radiusRight {
+  border-radius: 0 6px 6px 0;
 }

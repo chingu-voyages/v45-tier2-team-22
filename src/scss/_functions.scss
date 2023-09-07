@@ -1,8 +1,4 @@
-/// Converts px to rem:
-/// the provided value is divided by 16.
-/// (by default, 1rem equals to 16px).
-///
-/// @param {number} $px-value
-@function px-to-rem($px-value) {
-  @return ($px-value / 16) + rem;
+// Convert pixel do rem
+@function px-to-rem($px-value, $base-font-size: 16px) {
+  @return ($px-value / $base-font-size) * 1rem;
 }

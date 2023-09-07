@@ -1,22 +1,21 @@
-
 const Footer = () => {
   return (
-    <>
+    <footer style={{ marginBottom: "48px" }}>
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'center',
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <div style={{ textAlign: 'center', margin: '1rem' }}>
+        <div style={{ textAlign: "center", margin: "1rem" }}>
           <h4>Project created for Chingu Voyage #45</h4>
         </div>
         <div
           style={{
-            display: 'flex',
-            justifyContent: 'center',
+            display: "flex",
+            justifyContent: "center",
           }}
         >
           <a href="https://github.com/chingu-voyages/v45-tier2-team-22">
@@ -37,86 +36,86 @@ const Footer = () => {
 
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'center',
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         <a href="https://www.linkedin.com/in/emiri-ishikawa-5579341b0/">
           <img
-            src={'/images/image4.jpg'}
+            src={"/images/image4.jpg"}
             alt="profile1"
             sizes="32"
             height="32"
             width="32"
             style={{
-              borderRadius: '50%',
-              margin: '0.4rem',
-              border: '1px solid #fff',
+              borderRadius: "50%",
+              margin: "0.4rem",
+              border: "1px solid #fff",
             }}
           />
         </a>
 
         <a href="https://www.linkedin.com/in/jeeanny/">
           <img
-            src={'/images/image1.jpg'}
+            src={"/images/image1.jpg"}
             alt="profile2"
             sizes="32"
             height="32"
             width="32"
             style={{
-              borderRadius: '50%',
-              margin: '0.4rem',
-              border: '1px solid #fff',
+              borderRadius: "50%",
+              margin: "0.4rem",
+              border: "1px solid #fff",
             }}
           />
         </a>
 
         <a href="https://www.linkedin.com/in/padraig-o-donoghue-6175101ba/">
           <img
-            src={'/images/image2.jpg'}
+            src={"/images/image2.jpg"}
             alt="profile3"
             sizes="32"
             height="32"
             width="32"
             style={{
-              borderRadius: '50%',
-              margin: '0.4rem',
-              border: '1px solid #fff',
+              borderRadius: "50%",
+              margin: "0.4rem",
+              border: "1px solid #fff",
             }}
           />
         </a>
 
         <a href="https://github.com/simonC137">
           <img
-            src={'/images/image5.png'}
+            src={"/images/image5.png"}
             alt="profile4"
             sizes="32"
             height="32"
             width="32"
             style={{
-              borderRadius: '50%',
-              margin: '0.4rem',
-              border: '1px solid #fff',
+              borderRadius: "50%",
+              margin: "0.4rem",
+              border: "1px solid #fff",
             }}
           />
         </a>
 
         <a href="https://www.linkedin.com/in/renan-tiscoski/">
           <img
-            src={'/images/image3.jpg'}
+            src={"/images/image3.jpg"}
             alt="profile5"
             sizes="32"
             height="32"
             width="32"
             style={{
-              borderRadius: '50%',
-              margin: '0.4rem',
-              border: '1px solid #fff',
+              borderRadius: "50%",
+              margin: "0.4rem",
+              border: "1px solid #fff",
             }}
           />
         </a>
       </div>
-    </>
+    </footer>
   );
 };
 
