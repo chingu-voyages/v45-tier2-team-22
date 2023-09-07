@@ -1,9 +1,18 @@
 @use "../scss/constants" as *;
+@use "../scss/functions" as *;
 
 .contentWrapper {
   padding: $spacing_l;
+  width: 100vw;
+  margin: 0 auto;
+  max-width: px-to-rem(1600px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   section {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
