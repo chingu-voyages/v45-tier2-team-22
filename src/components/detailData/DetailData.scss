@@ -6,62 +6,57 @@
 // }
 
 .rdt_Table {
-    background-color: #000D21;
-    border: none;    
+  background-color: #000d21;
+  border: none;
 }
 .rdt_TableRow {
-    background-color: #000D21;
-    border: none;
-
+  background-color: #000d21;
+  border: none;
 }
 .rdt_TableCol {
-    background-color: #292C45;
-    border: #292C45 solid 1px;
-    
+  background-color: #292c45;
+  border: #292c45 solid 1px;
 }
 .rdt_TableCol_Sortable {
-    border: #292C45 solid 1px;
-    
+  border: #292c45 solid 1px;
 }
 .rdt_TableCell {
-    background-color: #000D21;
-    color: #DCE5F3;
-    
-
+  background-color: #000d21;
+  color: #dce5f3;
 }
 .rdt_TableHeader {
-    border: #292C45 solid 1px;
+  border: #292c45 solid 1px;
 }
 .rdt_TableFooter {
-    border: #292C45 solid 1px;
+  border: #292c45 solid 1px;
 }
 .rdt_TableHead {
-    background-color: #292C45;
-    color: #DCE5F3;
-    border: #292C45 solid 1px;
+  background-color: #292c45;
+  color: #dce5f3;
+  border: #292c45 solid 1px;
 }
 .rdt_TableHeadRow {
-    background-color: #292C45;
-    color: #DCE5F3;
-    border: #292C45 solid 1px;
+  background-color: #292c45;
+  color: #dce5f3;
+  border: #292c45 solid 1px;
 }
 .rdt_TableBody {
-    border: #292C45 solid 1px;
+  border: #292c45 solid 1px;
 }
 .rdt_ExpanderRow {
-    border: #292C45 solid 1px;
+  border: #292c45 solid 1px;
 }
 
-.rtd_Pagination, .isdzT {
-    background-color: #292C45;
-    color: #DCE5F3;
-    border: #292C45 solid 1px;
+.rtd_Pagination,
+.isdzT {
+  background-color: #292c45;
+  color: #dce5f3;
+  border: #292c45 solid 1px;
 }
 
-.container {
-    height: 535px;
-    width: 678.5px;
-    //margin-top: 226px;
-    //margin-left: 42px;
-    text-align: center;
+.detailDataContainer {
+  text-align: center;
+  flex-basis: 50%;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
 }

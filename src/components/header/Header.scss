@@ -1,0 +1,14 @@
+@use "../../scss/constants" as *;
+@use "../../scss//functions" as *;
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing_l;
+  margin-top: $spacing_m;
+}
+
+.animationWrapper {
+  width: px-to-rem(90px);
+}

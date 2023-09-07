@@ -1,0 +1,11 @@
+@use "../scss/constants" as *;
+
+.contentWrapper {
+  padding: $spacing_l;
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
