@@ -33,50 +33,36 @@ const ReBarChart = (dataset: any[]) => {
     return null;
   };
 
-  // const CustomTooltip = ({active, payload, label}) => {
-  //   // Tooltip displays year and totals strikes
-  //   if (active && payload && payload.length) {
-  //     const year = label;
-  //     const totalStrikes = payload[0].payload.totalStrikes;
-  //     const was = totalStrikes > 1 ? 'were' : 'was';
-  //     const strike = totalStrikes > 1 ? 'strikes' : 'strike';
-  //     return (
-  //       <div className="tooltip">
-  //         <p className="intro">{`There ${was} ${totalStrikes} ${strike} in ${label}`}</p>
-  //       </div>
-  //     );
-  //     }
-  //     return null
-  // };
-
   return (
 
-    dataset ?  (
-    <ResponsiveContainer width="100%" height="100%">
-    <BarChart
-      width={500}
-      height={300}
-      data={Dummydata}
-      margin={{
-        top: 20,
-        right: 30,
-        left: 5,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="year" />
-      <YAxis />
-      <Tooltip content={<CustomTooltip />} />
-      <Legend />
-      <Bar dataKey="stony" stackId="a" fill="blue" barSize={4} />
-      <Bar dataKey="martian" stackId="a" fill="green" barSize={4}/>
-      <Bar dataKey="iron_nickel" stackId="a" fill="yellow" barSize={4}/>
-      <Bar dataKey="iron_stone" stackId="a" fill="red" barSize={4}/>
-      <Bar dataKey="unknown" stackId="a" fill="white" barSize={4}/>
-    </BarChart>
-  </ResponsiveContainer>
-  ) : <p>Loading</p> )
+  //   dataset ?  (
+  //   <ResponsiveContainer width="100%" height="100%">
+  //   <BarChart
+  //     width={500}
+  //     height={300}
+  //     data={Dummydata}
+  //     margin={{
+  //       top: 20,
+  //       right: 30,
+  //       left: 5,
+  //       bottom: 5,
+  //     }}
+  //   >
+  //     <CartesianGrid strokeDasharray="3 3" />
+  //     <XAxis dataKey="year" />
+  //     <YAxis />
+  //     <Tooltip content={<CustomTooltip />} />
+  //     <Legend />
+  //     <Bar dataKey="stony" stackId="a" fill="blue" barSize={4} />
+  //     <Bar dataKey="martian" stackId="a" fill="green" barSize={4}/>
+  //     <Bar dataKey="iron_nickel" stackId="a" fill="yellow" barSize={4}/>
+  //     <Bar dataKey="iron_stone" stackId="a" fill="red" barSize={4}/>
+  //     <Bar dataKey="unknown" stackId="a" fill="white" barSize={4}/>
+  //   </BarChart>
+  // </ResponsiveContainer>
+  // ) : <p>Loading</p>
+  <p>Loading</p>
+  )
 }
 
 export default ReBarChart

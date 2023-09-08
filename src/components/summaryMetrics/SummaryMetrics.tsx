@@ -8,40 +8,49 @@ import categories from "../../../resources/dummyData/composition.json";
 // import graph
 import ReBarChart from "../ReBarChart/ReBarChart";
 
+// import StrikeData interface 
+
+import { StrikeData } from "@/interfacess/interfaces";
 // Import the context hook
 import { useAppContext } from "../../context/AppContext";
 
 // Shape of Api dataset
-interface StrikeData {
-  name: string;
-  id: string;
-  nametype: string;
-  recclass: string;
-  mass: string;
-  fall: string;
-  year: string;
-  reclat: string;
-  reclong: string;
-  geolocation: {
-    latitude: string;
-    longitude: string;
-  };
-}
+// interface StrikeData {
+//   name: string;
+//   id: string;
+//   nametype: string;
+//   recclass: string;
+//   mass: string;
+//   fall: string;
+//   year: string;
+//   reclat: string;
+//   reclong: string;
+//   geolocation: {
+//     latitude: string;
+//     longitude: string;
+//   };
+// }
 
 const SummaryMetrics = () => {
   // Access to initial state and reducer
-  const { state, dispatch } = useAppContext();
+  const { state, filteredData, dispatch } = useAppContext();
 
   // COMPONENT UTILITY FUNCTIONS
 
   // calculate amount of strikes from dataset (length of JSON)
   const calculateAmountOfStrikes = (dataset: StrikeData[]): number => {
+    if (dataset == null){
+      return;
+    }
     let totalStrikes: number = Object.keys(dataset).length;
     return totalStrikes;
   };
 
   // calculate avg mass of strikes
   const calculateAverageMass = (dataset: StrikeData[]): number => {
+    if (dataset == null){
+      return;
+    }
     const totalMass = dataset.reduce((sum, object) => {
       const mass = parseFloat(object.mass);
       return isNaN(mass) ? sum : sum + mass;
@@ -129,7 +138,7 @@ const SummaryMetrics = () => {
     });
   };
 
-  const rechartBarData = countStrikesByYearAndClass(state);
+  const rechartBarData = countStrikesByYearAndClass(filteredData);
 
   // interface DataPoint {
   //   year: string;
@@ -241,8 +250,8 @@ const SummaryMetrics = () => {
 
   // CONSTANTS for later rendering
 
-  const averageMass = calculateAverageMass(state);
-  const amountOfStrikes = calculateAmountOfStrikes(state);
+  const averageMass = calculateAverageMass(filteredData);
+  const amountOfStrikes = calculateAmountOfStrikes(filteredData);
 
   // const recclassObjects = strikeComposition.map((recclass) => {
   //   return {

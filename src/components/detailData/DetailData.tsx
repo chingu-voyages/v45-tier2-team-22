@@ -5,26 +5,13 @@ import { useAppContext } from "../../context/AppContext";
 import { StateType } from "@/reducer/reducer";
 import DataTable from "react-data-table-component";
 import "./DetailData.scss";
-
-// interface Meteor {
-//     name: string;
-//     id: string;
-//     nametype: string;
-//     recclass: string;
-//     mass: string;
-//     fall: string;
-//     year: string;
-//     reclat: string;
-//     reclong: string;
-//     geolocation: {
-//       latitude: string;
-//       longitude: string };
-// };
+import { StrikeData } from "@/interfacess/interfaces";
 
 const testLocation = "Area 51, NV";
 
 const DetailData = () => {
   const { state, filteredData } = useAppContext();
+
 
   const mockSearchResult = filteredData;
 
@@ -78,13 +65,21 @@ const DetailData = () => {
 
   return (
     <div className="detailDataContainer">
-      <DataTable
-        columns={columns}
-        data={mockSearchResult}
-        pagination
-        paginationComponentOptions={paginationComponentOptions}
-        customStyles={customStyles}
-      />
+
+      {
+        mockSearchResult ? (
+          <DataTable
+            columns={columns}
+            data={mockSearchResult}
+            pagination
+            paginationComponentOptions={paginationComponentOptions}
+            customStyles={customStyles}
+          />
+          
+        ) : (
+          <p>Loading</p>
+        )
+      }
     </div>
   );
 };
