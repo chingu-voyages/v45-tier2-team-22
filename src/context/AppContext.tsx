@@ -10,11 +10,8 @@ import {
   useEffect,
 } from "react";
 import reducer from "@/reducer/reducer";
-import DUMMY_DATA from "../../public/meteors.json";
 
 import { StateType, ActionType } from "@/reducer/reducer";
-
-import { StrikeData } from "@/interfacess/interfaces";
 
 // removed DUMMYData
 const initialState: StateType[] = [];
@@ -40,23 +37,24 @@ function fetchData<T>(url: string): Promise<T> {
 const DataContext = createContext<{
   state: StateType[];
   filteredData: StateType[];
-  dispatch: Dispatch<ActionType>;
-  setFilteredData: Dispatch<SetStateAction<StrikeData[]>>;
+  setFilteredData: Dispatch<SetStateAction<StateType[]>>;
 }>({
   state: initialState,
-  dispatch: () => null,
   filteredData: initialFilteredData,
   setFilteredData: () => {},
 });
 
 const AppContext = ({ children }: { children: ReactNode }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const [filteredData, setFilteredData] = useState<StrikeData[]>([]);
+  // refactored to use a useState since we're not using any dispatches yet
+  // const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, setState] = useState<StateType[]>([]);
+  const [filteredData, setFilteredData] = useState<StateType[]>([]);
 
   useEffect(() => {
     fetchData(MeteorStrikeAPI)
       .then(data => {
         // not sure yet how to add the data type, StrikeData to the fetch data
+        setState(data)
         setFilteredData(data);
       })
       .catch(error => {
@@ -66,16 +64,16 @@ const AppContext = ({ children }: { children: ReactNode }) => {
 
   return (
     <DataContext.Provider
-      value={{ state, dispatch, filteredData, setFilteredData }}>
+      value={{ state, filteredData, setFilteredData }}>
       {children}
     </DataContext.Provider>
   );
 };
 
 export function useAppContext() {
-  const { state, dispatch, filteredData, setFilteredData } =
+  const { state, filteredData, setFilteredData } =
     useContext(DataContext);
-  return { state, dispatch, filteredData, setFilteredData };
+  return { state, filteredData, setFilteredData };
 }
 
 export default AppContext;

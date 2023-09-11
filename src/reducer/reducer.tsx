@@ -25,7 +25,6 @@ const reducer = (state: StateType[], action: ActionType) => {
   switch (action.type) {
     case "HELLO":
       return { ...state };
-
     default:
       throw new Error("Unidentified reducer action type");
   }

@@ -35,33 +35,33 @@ const ReBarChart = (dataset: any[]) => {
 
   return (
 
-  //   dataset ?  (
-  //   <ResponsiveContainer width="100%" height="100%">
-  //   <BarChart
-  //     width={500}
-  //     height={300}
-  //     data={Dummydata}
-  //     margin={{
-  //       top: 20,
-  //       right: 30,
-  //       left: 5,
-  //       bottom: 5,
-  //     }}
-  //   >
-  //     <CartesianGrid strokeDasharray="3 3" />
-  //     <XAxis dataKey="year" />
-  //     <YAxis />
-  //     <Tooltip content={<CustomTooltip />} />
-  //     <Legend />
-  //     <Bar dataKey="stony" stackId="a" fill="blue" barSize={4} />
-  //     <Bar dataKey="martian" stackId="a" fill="green" barSize={4}/>
-  //     <Bar dataKey="iron_nickel" stackId="a" fill="yellow" barSize={4}/>
-  //     <Bar dataKey="iron_stone" stackId="a" fill="red" barSize={4}/>
-  //     <Bar dataKey="unknown" stackId="a" fill="white" barSize={4}/>
-  //   </BarChart>
-  // </ResponsiveContainer>
-  // ) : <p>Loading</p>
-  <p>Loading</p>
+    dataset ?  (
+    <ResponsiveContainer width="100%" height="100%">
+    <BarChart
+      width={500}
+      height={300}
+      data={Dummydata}
+      margin={{
+        top: 20,
+        right: 30,
+        left: 5,
+        bottom: 5,
+      }}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="year" />
+      <YAxis />
+      <Tooltip content={<CustomTooltip />} />
+      <Legend />
+      <Bar dataKey="stony" stackId="a" fill="blue" barSize={4} />
+      <Bar dataKey="martian" stackId="a" fill="green" barSize={4}/>
+      <Bar dataKey="iron_nickel" stackId="a" fill="yellow" barSize={4}/>
+      <Bar dataKey="iron_stone" stackId="a" fill="red" barSize={4}/>
+      <Bar dataKey="unknown" stackId="a" fill="white" barSize={4}/>
+    </BarChart>
+  </ResponsiveContainer>
+  ) : <p>Loading</p>
+
   )
 }
 
