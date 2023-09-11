@@ -15,6 +15,7 @@ const Search = () => {
   const [massRangeMin, setMassRangeMin] = useState<string>("");
   const [massRangeMax, setMassRangeMax] = useState<string>("");
 
+  // Refactor so that all years are lifted from dataset
   const yearArray = () => {
     const thisYear = new Date().getFullYear();
     let targetYear = thisYear;
@@ -83,6 +84,7 @@ const Search = () => {
     setYearOfStrike("");
     setMassRangeMin("");
     setMassRangeMax("");
+    setFilteredData(state);
   };
 
   const searchHandler = () => {
