@@ -1,11 +1,6 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './ReBarChart.scss';
-import Dummydata from '../../../resources/dummyData/rechartDummyData.json';
-
-// Creating an interface for the dataset requires restructing the dataset
-// Structure has the material as the key, this would have to be refactored
-
 
 const ReBarChart = (dataset: any[]) => {
 
@@ -35,12 +30,12 @@ const ReBarChart = (dataset: any[]) => {
 
   return (
 
-    dataset ?  (
+    dataset.data ?  (
     <ResponsiveContainer width="100%" height="100%">
     <BarChart
       width={500}
       height={300}
-      data={Dummydata}
+      data={dataset.data}
       margin={{
         top: 20,
         right: 30,
