@@ -26,3 +26,19 @@ a {
     color-scheme: dark;
   }
 }
+
+.light {
+  background-color: $primary_light;
+
+  p,
+  a,
+  select,
+  button,
+  input,
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $primary_dark;
+  }
+}

@@ -1,62 +1,13 @@
-// .tableData {
-//     width: 678.5px;
-//     height: 535px;
-//     padding: 10px;
-//     background-color: #000D21;
-// }
+@use "../../scss/constants" as *;
 
-.rdt_Table {
-  background-color: #000d21;
-  border: none;
-}
 .rdt_TableRow {
-  background-color: #000d21;
-  border: none;
-}
-.rdt_TableCol {
-  background-color: #292c45;
-  border: #292c45 solid 1px;
-}
-.rdt_TableCol_Sortable {
-  border: #292c45 solid 1px;
-}
-.rdt_TableCell {
-  background-color: #000d21;
-  color: #dce5f3;
-}
-.rdt_TableHeader {
-  border: #292c45 solid 1px;
-}
-.rdt_TableFooter {
-  border: #292c45 solid 1px;
-}
-.rdt_TableHead {
-  background-color: #292c45;
-  color: #dce5f3;
-  border: #292c45 solid 1px;
-}
-.rdt_TableHeadRow {
-  background-color: #292c45;
-  color: #dce5f3;
-  border: #292c45 solid 1px;
-}
-.rdt_TableBody {
-  border: #292c45 solid 1px;
-}
-.rdt_ExpanderRow {
-  border: #292c45 solid 1px;
-}
-
-.rtd_Pagination,
-.isdzT {
-  background-color: #292c45;
-  color: #dce5f3;
-  border: #292c45 solid 1px;
+  border: 0.5px solid $secondary_dark;
 }
 
 .detailDataContainer {
   text-align: center;
   flex-basis: 50%;
   border-radius: 10px 10px 0 0;
-  overflow: hidden;
+  border: 2px solid $secondary_dark;
+  box-shadow: 2px 2px 10px 0px rgba(159, 106, 245, 0.25);
 }
