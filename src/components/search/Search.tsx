@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Search.scss";
-import { getFetchData } from "@/global/util";
 import { BiSearch } from "react-icons/bi";
 import { MdClear } from "react-icons/md";
 import { useAppContext } from "@/context/AppContext";
@@ -14,6 +13,7 @@ const Search = () => {
   const [yearOfStrike, setYearOfStrike] = useState<string>("");
   const [massRangeMin, setMassRangeMin] = useState<string>("");
   const [massRangeMax, setMassRangeMax] = useState<string>("");
+  const { state, setFilteredData, currentTheme } = useAppContext();
 
   // Refactor so that all years are lifted from dataset
   const yearArray = () => {
@@ -26,8 +26,6 @@ const Search = () => {
     }
     return targetYearArray;
   };
-
-  const { state, filteredData, setFilteredData } = useAppContext();
 
   const searchArray = [
     {
@@ -123,7 +121,7 @@ const Search = () => {
         {searchArray.map((search, index) =>
           search.type === "text" ? (
             <div className="input_wrapper" key={search.id}>
-              <BiSearch />
+              <BiSearch color={currentTheme === "light" ? "#000d21" : ""} />
               <input
                 className={
                   index === 0
@@ -144,7 +142,7 @@ const Search = () => {
             </div>
           ) : (
             <div className="select_wrapper" key={search.id}>
-              <BiSearch />
+              <BiSearch color={currentTheme === "light" ? "#000d21" : ""} />
               <select
                 className="search_select"
                 value={search.value}

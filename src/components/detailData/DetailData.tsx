@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useAppContext } from "../../context/AppContext";
 import { StateType } from "@/reducer/reducer";
 import DataTable from "react-data-table-component";
@@ -10,10 +9,14 @@ import { StrikeData } from "@/interfacess/interfaces";
 const testLocation = "Area 51, NV";
 
 const DetailData = () => {
-  const { state, filteredData } = useAppContext();
-
+  const { filteredData, currentTheme } = useAppContext();
 
   const mockSearchResult = filteredData;
+  const theme = {
+    font: currentTheme === "light" ? "#000d21" : "#eeeeee",
+    backgroundColor: currentTheme === "light" ? "#dce5f3" : "#000d21",
+    headerBackgroundColor: currentTheme === "light" ? "#dce5f3" : "#000d21",
+  };
 
   const columns = [
     {
@@ -46,40 +49,43 @@ const DetailData = () => {
     rows: {
       style: {
         minHeight: "30px",
+        backgroundColor: theme.backgroundColor,
       },
     },
     headCells: {
       style: {
-        paddingLeft: "8px",
-        paddingRight: "8px",
-        fontSize: "15px",
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        fontSize: "16px",
+        color: theme.font,
+        backgroundColor: theme.headerBackgroundColor,
       },
     },
     cells: {
       style: {
-        paddingLeft: "8px",
-        paddingRight: "8px",
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        paddingTop: "10px",
+        paddingBottom: "10px",
+        fontSize: "15px",
+        color: theme.font,
       },
     },
   };
 
   return (
     <div className="detailDataContainer">
-
-      {
-        mockSearchResult ? (
-          <DataTable
-            columns={columns}
-            data={mockSearchResult}
-            pagination
-            paginationComponentOptions={paginationComponentOptions}
-            customStyles={customStyles}
-          />
-          
-        ) : (
-          <p>Loading</p>
-        )
-      }
+      {mockSearchResult ? (
+        <DataTable
+          columns={columns}
+          data={mockSearchResult}
+          pagination
+          paginationComponentOptions={paginationComponentOptions}
+          customStyles={customStyles}
+        />
+      ) : (
+        <p>Loading</p>
+      )}
     </div>
   );
 };

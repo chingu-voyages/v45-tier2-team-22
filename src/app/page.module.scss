@@ -1,6 +1,26 @@
 @use "../scss/constants" as *;
 @use "../scss/functions" as *;
 
+.main {
+  height: 100%;
+}
+
+.light {
+  background-color: $primary_light;
+
+  p,
+  button,
+  option,
+  input,
+  h1,
+  h2,
+  h3,
+  h4,
+  select {
+    color: $primary_dark;
+  }
+}
+
 .contentWrapper {
   padding: $spacing_l;
   width: 100vw;
@@ -17,4 +37,10 @@
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.toggleWrapper {
+  position: absolute;
+  top: $spacing_s;
+  right: $spacing_s;
 }

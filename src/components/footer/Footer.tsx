@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer style={{ marginBottom: "48px" }}>
+    <footer style={{ paddingBottom: "48px" }}>
       <div
         style={{
           display: "flex",
