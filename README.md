@@ -1,5 +1,37 @@
 # voyage-project-tier2-fireball
 
+## Project Title: Fireball
+
+## Overview
+
+Fireball is a Chingu Tier II group project. It pulls meteor strike data from an API and displays this information in a variety of ways.
+
+## Features
+
+- Fetch Api Call
+- Search bar to filter strike data
+- Summary of strike data bar chart
+- Paginated table of search results
+- Globe displaying strike locations
+- Dark / Light mode
+- Links to contact project developers
+
+## Running the project
+
+1. Clone repo into your IDE
+2. npm install to install dependancies
+3. npm run dev to begin NextJs development server on localhost
+
+## Dependencies
+
+Some core technologies used
+
+- Next.Js
+- Three.js
+- Cypress Testing Suite
+- Rechart.js
+- React Data Table Component
+
 ## Table of Contents
 
 - [Overview](#overview)
