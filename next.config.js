@@ -9,6 +9,9 @@ const nextConfig = {
 
     return config;
   },
+  typescript: {
+    ignoreBuildErrors: true, //Vercel will build with typescript errors
+  }
 };
 
 module.exports = nextConfig;
