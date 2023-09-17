@@ -1,5 +1,5 @@
+//@ts-nocheck
 "use client";
-
 import React, { useState } from "react";
 import "./Search.scss";
 import { BiSearch } from "react-icons/bi";

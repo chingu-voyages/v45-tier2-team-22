@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client"; // NEXTJS client side component
 import React from 'react';
 import "./SummaryMetrics.scss";

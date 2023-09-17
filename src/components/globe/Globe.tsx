@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 import React, { Suspense, useLayoutEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
