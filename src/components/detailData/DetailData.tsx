@@ -1,17 +1,16 @@
+// @ts-nocheck
 "use client";
 
 import { useAppContext } from "../../context/AppContext";
 import { StateType } from "@/reducer/reducer";
 import DataTable from "react-data-table-component";
 import "./DetailData.scss";
-import { StrikeData } from "@/interfacess/interfaces";
-
-const testLocation = "Area 51, NV";
 
 const DetailData = () => {
   const { filteredData, currentTheme } = useAppContext();
 
   const mockSearchResult = filteredData;
+
   const theme = {
     font: currentTheme === "light" ? "#000d21" : "#eeeeee",
     backgroundColor: currentTheme === "light" ? "#dce5f3" : "#000d21",
@@ -38,9 +37,31 @@ const DetailData = () => {
     },
     {
       name: "Location",
-      selector: (row: StateType) => testLocation,
+      selector: (row: StateType) => row.location
     },
+    {
+      name: "",
+      width: '1px',
+      compact: true,
+      selector: (row: StateType) => {
+        const headers = { "Authorization" : process.env.NEXT_PUBLIC_RADAR_KEY}
+        const coords = row.reclat + ", " + row.reclong;
+        const URL = "https://api.radar.io/v1/geocode/reverse?coordinates=" + coords + "&layers=state,country"
+
+          fetch(URL, {headers})
+          .then(response => response.json())
+          .then(data => {
+            row.location = data.addresses["0"].state + ", " + data.addresses["0"].country
+          })
+          .catch(error => {
+            console.error("There was an error", error)
+        })
+
+      }
+    }
   ];
+
+  
 
   const paginationComponentOptions = {
     noRowsPerPage: true,
