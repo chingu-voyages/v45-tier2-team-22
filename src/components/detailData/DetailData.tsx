@@ -7,6 +7,7 @@ import DataTable from "react-data-table-component";
 import "./DetailData.scss";
 
 const DetailData = () => {
+  console.log("env variables",process.env.NEXT_PUBLIC_RADAR_KEY)
   const { filteredData, currentTheme } = useAppContext();
 
   const mockSearchResult = filteredData;
